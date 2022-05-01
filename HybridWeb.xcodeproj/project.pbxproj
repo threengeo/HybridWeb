@@ -21,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		2A60FDB3281A87EC00AA1205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2A60FDB4281F55E000AA1205 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2AF550892818BFCA00D6FBA1 /* WebViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewConfig.swift; sourceTree = "<group>"; };
 		2AF5508B2818C02000D6FBA1 /* WebViewScriptMessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewScriptMessageHandler.swift; sourceTree = "<group>"; };
 		2AF5508D2818C0B200D6FBA1 /* WebViewNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		D8F8951E28180FA7006BB149 = {
 			isa = PBXGroup;
 			children = (
+				2A60FDB4281F55E000AA1205 /* README.md */,
 				D8F8952928180FA7006BB149 /* HybridWeb */,
 				D8F8952828180FA7006BB149 /* Products */,
 			);
