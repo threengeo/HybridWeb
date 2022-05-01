@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>iOS | Javascript</title>
+    </head>
+    <body>
+        <h1>iOS <---> Javascript</h1>
+        
+        <div>
+            <button id="setCookieButton" type="button">Set Cookie</button>
+            <button id="getCookieButton" type="button">Get Cookie</button>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <button id="getGpsButton" type="button">GetGps</button>
+            <button id="getAppVersionButton" type="button">GetAppVersion</button>
+            <button id="autoLoginYnButton" type="button">AutoLoginYN</button>
+            <button id="getTokenIdButton" type="button">GetTokenID</button>
+            <button id="clearBadgeCountButton" type="button">ClearBadge</button>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <button id="alertButton" type="button">Alert</button>
+            <button id="confirmButton" type="button" style="margin-left: 20px">
+                Confirm
+            </button>
+            <button id="promptButton" type="button" style="margin-left: 20px">
+                Prompt
+            </button>
+        </div>
+        
+        <hr />
+        
+        <div>
+            <button id="jsToNative" type="button">JS -> Native</button>
+        </div>
+        
+        <hr />
+        
+        <div id="log"></div>
+        
+        
+        <script>
+            document
+            .getElementById("alertButton")
+            .addEventListener("click", function () {
+                alertTest();
+            });
+            
+            document
+            .getElementById("confirmButton")
+            .addEventListener("click", function () {
+                confirmTest();
+            });
+            
+            document
+            .getElementById("promptButton")
+            .addEventListener("click", function () {
+                promptTest();
+            });
+            
+            function alertTest() {
+                alert("기본 알럿 창입니다.");
+                
+                log(typeof webkit.messageHandlers.bridge.postMessage);
+                webkit.messageHandlers.bridge.postMessage('{"msg": "alertTest","id": ' + Date.now() + '}');
+            }
+            
+            function confirmTest() {
+                var confirmFlag = confirm("저장 하시겠습니까?");
+                console.log(confirmFlag);
+                
+                if (confirmFlag) {
+                    log(typeof webkit.messageHandlers.bridge.postMessage);
+                    webkit.messageHandlers.bridge.postMessage('{"msg": "confirmTest","id": ' + Date.now() + '}');
+                }
+            }
+            
+            function promptTest() {
+                var result = prompt("주소를 입력하세요!", "제주특별시");
+                console.log(result);
+                
+                if (result) {
+                    log(typeof webkit.messageHandlers.bridge.postMessage);
+                    webkit.messageHandlers.bridge.postMessage('{"msg": ' + result + '}');
+                }
+            }
+            
+            
+            
+            const log = (msg) => {
+                const p = document.createElement("p");
+                p.textContent = msg;
+                document.querySelector("#log").append(p);
+            };
+            
+            // to receive messages from native
+            webkit.messageHandlers.bridge.onMessage = (msg) => {
+                log("from native:" + msg);
+            };
+            
+            document.getElementById("jsToNative").addEventListener("click", function() {
+                log(typeof webkit.messageHandlers.bridge.postMessage);
+                // send messages to native
+                webkit.messageHandlers.bridge.postMessage('{"msg": "hello?","id": ' + Date.now() + '}')
+            });
+            
+            
+            document
+            .getElementById("setCookieButton")
+            .addEventListener("click", function () {
+                console.log("set cookie...");
+                document.cookie = "hybridCookie=token_asdfasdf001010";
+            });
+            
+            document
+            .getElementById("getCookieButton")
+            .addEventListener("click", function () {
+                console.log("get cookie...");
+                console.log(document.cookie);
+                webkit.messageHandlers.bridge.postMessage(document.cookie);
+            });
+            
+            
+            // postMessage에 값이 항상 있어야함 없음면 전달 안됨
+            document.getElementById("getGpsButton").addEventListener("click", function() {
+                webkit.messageHandlers.getGps.postMessage("");
+            })
+            
+            document.getElementById("getAppVersionButton").addEventListener("click", function() {
+                webkit.messageHandlers.getAppVersion.postMessage("");
+            })
+            
+            document.getElementById("autoLoginYnButton").addEventListener("click", function() {
+                webkit.messageHandlers.autoLoginYn.postMessage("{autoLogin: 'Y'}");
+            })
+            
+            document.getElementById("getTokenIdButton").addEventListener("click", function() {
+                webkit.messageHandlers.getTokenId.postMessage("");
+            })
+            
+            document.getElementById("clearBadgeCountButton").addEventListener("click", function() {
+                webkit.messageHandlers.clearBadgeCount.postMessage("");
+            })
+        </script>
+    </body>
+</html>
+
