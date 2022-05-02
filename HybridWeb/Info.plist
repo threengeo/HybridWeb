@@ -7,5 +7,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME)앱은 내위치 기반 날씨 정보 서비스 및 네비게이션 서비스를 위하여 위치정보를 필요로 합니다.</string>
 </dict>
 </plist>

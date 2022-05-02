@@ -47,7 +47,7 @@ extension MainWebView.Coordinator: WKUIDelegate {
     // 알림창 출력
     func showAlert(alert: UIAlertController) {
         if let controller = topMostViewController() {
-            controller.present(alert, animated: true)
+            controller.present(alert, animated: true, completion: nil)
         }
     }
 

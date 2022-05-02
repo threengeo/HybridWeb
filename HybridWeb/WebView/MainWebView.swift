@@ -11,6 +11,8 @@ import Combine
 
 struct MainWebView: UIViewRepresentable {
     
+    @EnvironmentObject var webViewModel: WebViewModel
+    
 //    let wkProcessPool = WKProcessPool() //쿠키 공유? (섬프로)
     
     let urlString: String

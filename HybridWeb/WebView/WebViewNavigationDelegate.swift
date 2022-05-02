@@ -13,6 +13,8 @@ extension MainWebView.Coordinator: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("WKNavigationDelegate: webView() - didFinish")
         self.currentWebView = webView
+        
+//        self.parent.webViewModel.checkIfLocationServicesIsEnabled()
     }
     
 }

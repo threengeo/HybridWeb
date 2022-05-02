@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A5936BB281FB68800E0E3BE /* AppAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5936BA281FB68800E0E3BE /* AppAlert.swift */; };
+		2A60FDB6281F5D5500AA1205 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60FDB5281F5D5500AA1205 /* WebViewModel.swift */; };
 		2AF5508A2818BFCA00D6FBA1 /* WebViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF550892818BFCA00D6FBA1 /* WebViewConfig.swift */; };
 		2AF5508C2818C02000D6FBA1 /* WebViewScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF5508B2818C02000D6FBA1 /* WebViewScriptMessageHandler.swift */; };
 		2AF5508E2818C0B200D6FBA1 /* WebViewNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF5508D2818C0B200D6FBA1 /* WebViewNavigationDelegate.swift */; };
@@ -20,8 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A5936BA281FB68800E0E3BE /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
 		2A60FDB3281A87EC00AA1205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2A60FDB4281F55E000AA1205 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2A60FDB5281F5D5500AA1205 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
 		2AF550892818BFCA00D6FBA1 /* WebViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewConfig.swift; sourceTree = "<group>"; };
 		2AF5508B2818C02000D6FBA1 /* WebViewScriptMessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewScriptMessageHandler.swift; sourceTree = "<group>"; };
 		2AF5508D2818C0B200D6FBA1 /* WebViewNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 				2AF5508D2818C0B200D6FBA1 /* WebViewNavigationDelegate.swift */,
 				2AF5508B2818C02000D6FBA1 /* WebViewScriptMessageHandler.swift */,
 				2AF550892818BFCA00D6FBA1 /* WebViewConfig.swift */,
+				2A60FDB5281F5D5500AA1205 /* WebViewModel.swift */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 				D8F8952E28180FA9006BB149 /* Assets.xcassets */,
 				D8F8953028180FA9006BB149 /* Preview Content */,
 				2AF550992818CAFB00D6FBA1 /* index.html */,
+				2A5936BA281FB68800E0E3BE /* AppAlert.swift */,
 			);
 			path = HybridWeb;
 			sourceTree = "<group>";
@@ -170,11 +176,13 @@
 			files = (
 				D8F8952D28180FA7006BB149 /* ContentView.swift in Sources */,
 				2AF5508A2818BFCA00D6FBA1 /* WebViewConfig.swift in Sources */,
+				2A5936BB281FB68800E0E3BE /* AppAlert.swift in Sources */,
 				2AF5508E2818C0B200D6FBA1 /* WebViewNavigationDelegate.swift in Sources */,
 				D8F8953928180FD1006BB149 /* MainWebView.swift in Sources */,
 				2AF5508C2818C02000D6FBA1 /* WebViewScriptMessageHandler.swift in Sources */,
 				D8F8952B28180FA7006BB149 /* HybridWebApp.swift in Sources */,
 				2AF550902818C0E600D6FBA1 /* WebViewUIDelegate.swift in Sources */,
+				2A60FDB6281F5D5500AA1205 /* WebViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

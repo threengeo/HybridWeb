@@ -25,6 +25,7 @@ extension MainWebView.Coordinator: WKScriptMessageHandler {
             
         case "getGps":
             print("getGps...")
+            self.parent.webViewModel.checkIfLocationServicesIsEnabled()
             break
             
         case "getAppVersion":

@@ -13,13 +13,25 @@ struct TVShow: Identifiable {
 }
 
 struct ContentView: View {
-    @State private var selectedShow: TVShow?
+    @StateObject var webViewModel = WebViewModel()
+    
+    @State private var showAppAlert: AppAlert?
     
     var body: some View {
-        VStack {
-            Text("MainWebView")
-            MainWebView(urlString: "http://sumpro.todayjeju.net")
-        }
+        NavigationView {
+            ZStack {
+                VStack {
+                    MainWebView(urlString: "http://sumpro.todayjeju.net")
+                }
+                .alert(item: $showAppAlert) { appAlert in
+                    Alert(title: Text(appAlert.title), message: Text(appAlert.message), dismissButton: .default(Text("확인")))
+                }
+            }
+            .onReceive(webViewModel.alertEvent, perform: { appAlert in
+                print("ContentView - AppAlert: ", appAlert)
+                self.showAppAlert = appAlert
+            })
+        }.environmentObject(webViewModel)
         
 //        VStack(spacing: 20) {
 //            Text("What is your favorite TV show?")
@@ -34,9 +46,14 @@ struct ContentView: View {
 //            }
 //        }
 //        .alert(item: $selectedShow) { show in
-//            Alert(title: Text(show.name), message: Text("Great choice!"), dismissButton: .cancel())
+//            Alert(title: Text(show.name), message: Text("Great choice!"), primaryButton: .destructive(Text("취소"), action: {
+//                print("취소...")
+//            }), secondaryButton: .default(Text("확인."), action: {
+//                print("확인...")
+//            }))
 //        }
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
