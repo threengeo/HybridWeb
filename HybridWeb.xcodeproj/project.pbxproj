@@ -14,6 +14,10 @@
 		2AF5508E2818C0B200D6FBA1 /* WebViewNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF5508D2818C0B200D6FBA1 /* WebViewNavigationDelegate.swift */; };
 		2AF550902818C0E600D6FBA1 /* WebViewUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF5508F2818C0E600D6FBA1 /* WebViewUIDelegate.swift */; };
 		2AF5509A2818CAFB00D6FBA1 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 2AF550992818CAFB00D6FBA1 /* index.html */; };
+		D87B9031281FFEF500DF8CF1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D87B9030281FFEF500DF8CF1 /* FirebaseAnalytics */; };
+		D87B9033281FFEF500DF8CF1 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D87B9032281FFEF500DF8CF1 /* FirebaseMessaging */; };
+		D87B90362820001800DF8CF1 /* GoogleService-Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = D87B90352820001800DF8CF1 /* GoogleService-Info-dev.plist */; };
+		D87B903C2820125300DF8CF1 /* GoogleService-Info-prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = D87B903B2820125200DF8CF1 /* GoogleService-Info-prod.plist */; };
 		D8F8952B28180FA7006BB149 /* HybridWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F8952A28180FA7006BB149 /* HybridWebApp.swift */; };
 		D8F8952D28180FA7006BB149 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F8952C28180FA7006BB149 /* ContentView.swift */; };
 		D8F8952F28180FA9006BB149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F8952E28180FA9006BB149 /* Assets.xcassets */; };
@@ -31,6 +35,10 @@
 		2AF5508D2818C0B200D6FBA1 /* WebViewNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewNavigationDelegate.swift; sourceTree = "<group>"; };
 		2AF5508F2818C0E600D6FBA1 /* WebViewUIDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewUIDelegate.swift; sourceTree = "<group>"; };
 		2AF550992818CAFB00D6FBA1 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		D87B9034281FFF8700DF8CF1 /* HybridWeb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HybridWeb.entitlements; sourceTree = "<group>"; };
+		D87B90352820001800DF8CF1 /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-dev.plist"; path = "../../../../Downloads/GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
+		D87B903A282011A700DF8CF1 /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
+		D87B903B2820125200DF8CF1 /* GoogleService-Info-prod.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-prod.plist"; path = "../../../../../Downloads/GoogleService-Info-prod.plist"; sourceTree = "<group>"; };
 		D8F8952728180FA7006BB149 /* HybridWeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridWeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F8952A28180FA7006BB149 /* HybridWebApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridWebApp.swift; sourceTree = "<group>"; };
 		D8F8952C28180FA7006BB149 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87B9033281FFEF500DF8CF1 /* FirebaseMessaging in Frameworks */,
+				D87B9031281FFEF500DF8CF1 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +71,15 @@
 				2A60FDB5281F5D5500AA1205 /* WebViewModel.swift */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		D87B90392820118400DF8CF1 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D87B903B2820125200DF8CF1 /* GoogleService-Info-prod.plist */,
+				D87B903A282011A700DF8CF1 /* GoogleService-Info-dev.plist */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		D8F8951E28180FA7006BB149 = {
@@ -83,10 +102,13 @@
 		D8F8952928180FA7006BB149 /* HybridWeb */ = {
 			isa = PBXGroup;
 			children = (
+				D87B90392820118400DF8CF1 /* Firebase */,
+				D87B9034281FFF8700DF8CF1 /* HybridWeb.entitlements */,
 				2A60FDB3281A87EC00AA1205 /* Info.plist */,
 				2AF550882818BF9300D6FBA1 /* WebView */,
 				D8F8952A28180FA7006BB149 /* HybridWebApp.swift */,
 				D8F8952C28180FA7006BB149 /* ContentView.swift */,
+				D87B90352820001800DF8CF1 /* GoogleService-Info-dev.plist */,
 				D8F8952E28180FA9006BB149 /* Assets.xcassets */,
 				D8F8953028180FA9006BB149 /* Preview Content */,
 				2AF550992818CAFB00D6FBA1 /* index.html */,
@@ -113,12 +135,17 @@
 				D8F8952328180FA7006BB149 /* Sources */,
 				D8F8952428180FA7006BB149 /* Frameworks */,
 				D8F8952528180FA7006BB149 /* Resources */,
+				D87B903D282012E200DF8CF1 /* Firebase info plist */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = HybridWeb;
+			packageProductDependencies = (
+				D87B9030281FFEF500DF8CF1 /* FirebaseAnalytics */,
+				D87B9032281FFEF500DF8CF1 /* FirebaseMessaging */,
+			);
 			productName = HybridWeb;
 			productReference = D8F8952728180FA7006BB149 /* HybridWeb.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +174,9 @@
 				Base,
 			);
 			mainGroup = D8F8951E28180FA7006BB149;
+			packageReferences = (
+				D87B902F281FFEF500DF8CF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D8F8952828180FA7006BB149 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -162,12 +192,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AF5509A2818CAFB00D6FBA1 /* index.html in Resources */,
+				D87B90362820001800DF8CF1 /* GoogleService-Info-dev.plist in Resources */,
 				D8F8953228180FA9006BB149 /* Preview Assets.xcassets in Resources */,
+				D87B903C2820125300DF8CF1 /* GoogleService-Info-prod.plist in Resources */,
 				D8F8952F28180FA9006BB149 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D87B903D282012E200DF8CF1 /* Firebase info plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Firebase info plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#파이어베이스 인포 리스트 올리기 개발, 운영 \nPATH_TO_GOOGLE_PLISTS=\"${PROJECT_DIR}/${PRODUCT_NAME}/Firebase\"\n\ncase \"${CONFIGURATION}\" in\n  \"Debug\" )\ncp -r \"$SRCROOT/${PRODUCT_NAME}/Firebase/GoogleService-Info-dev.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\" ;;\n  \"Release\" )\ncp -r \"$SRCROOT/${PRODUCT_NAME}/Firebase/GoogleService-Info-prod.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\" ;;\n*)\n;;\nesac\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D8F8952328180FA7006BB149 /* Sources */ = {
@@ -308,13 +361,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HybridWeb/HybridWeb.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HybridWeb/Preview Content\"";
-				DEVELOPMENT_TEAM = S6JTS3TNB4;
+				DEVELOPMENT_TEAM = 9AFL4TRMR2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HybridWeb/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME)앱은 내위치 기반 날씨 정보 서비스 및 네비게이션 서비스를 위하여 위치정보를 필요로 합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -325,7 +380,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.nextez.HybridWeb;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.co.nextez.HybridWeb-dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -338,13 +393,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HybridWeb/HybridWeb.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HybridWeb/Preview Content\"";
-				DEVELOPMENT_TEAM = S6JTS3TNB4;
+				DEVELOPMENT_TEAM = 9AFL4TRMR2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HybridWeb/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME)앱은 내위치 기반 날씨 정보 서비스 및 네비게이션 서비스를 위하여 위치정보를 필요로 합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -355,7 +412,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.nextez.HybridWeb;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.co.nextez.HybridWeb-prod";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -385,6 +442,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D87B902F281FFEF500DF8CF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D87B9030281FFEF500DF8CF1 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D87B902F281FFEF500DF8CF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D87B9032281FFEF500DF8CF1 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D87B902F281FFEF500DF8CF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D8F8951F28180FA7006BB149 /* Project object */;
 }

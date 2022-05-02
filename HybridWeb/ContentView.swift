@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-struct TVShow: Identifiable {
-    var id: String { name }
-    let name: String
-}
-
 struct ContentView: View {
     @StateObject var webViewModel = WebViewModel()
     
@@ -21,7 +16,8 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    MainWebView(urlString: "http://sumpro.todayjeju.net")
+                    MainWebView(urlString: "http://www.naver.com")
+                        .edgesIgnoringSafeArea(.all)
                 }
                 .alert(item: $showAppAlert) { appAlert in
                     Alert(title: Text(appAlert.title), message: Text(appAlert.message), dismissButton: .default(Text("확인")))
@@ -31,7 +27,12 @@ struct ContentView: View {
                 print("ContentView - AppAlert: ", appAlert)
                 self.showAppAlert = appAlert
             })
-        }.environmentObject(webViewModel)
+        }
+        .environmentObject(webViewModel)
+        .navigationTitle("")
+        .navigationBarHidden(true)
+//        .navigationBarTitle("", displayMode: .automatic)
+//        .navigationBarHidden(true)
         
 //        VStack(spacing: 20) {
 //            Text("What is your favorite TV show?")
