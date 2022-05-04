@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<string>NO</string>
 	<key>FirebaseDynamicLinksCustomDomains</key>
@@ -17,11 +12,10 @@
 	<string>YES</string>
 	<key>FirebaseScreenReportingEnabled</key>
 	<string>NO</string>
-	<key>NSCameraUsageDescription</key>
-	<string>${BUNDLE_DISPLAY_NAME} 앱의 올바른 기능을 위해 카메라 사용 권한이 필요합니다.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>${BUNDLE_DISPLAY_NAME} 앱의 올바른 기능을 위해 앨범 접근 권한이 필요합니다.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>${BUNDLE_DISPLAY_NAME}  앱의 올바른 기능을 위해 위치정보가 필요합니다.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
