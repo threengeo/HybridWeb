@@ -44,6 +44,23 @@ extension MainWebView.Coordinator: WKUIDelegate {
     }
     
     
+    // window.open
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        print("createWebViewWith...")
+        
+        if let url = navigationAction.request.url {
+            
+            print("url aaa : \(url.absoluteString)")
+            print("url.host : \((url.host ?? ""))")
+            
+            UIApplication.shared.open(navigationAction.request.url!, options: [:], completionHandler: nil)
+            
+        }
+        
+        return nil
+    }
+    
+    
     // 알림창 출력
     func showAlert(alert: UIAlertController) {
         if let controller = topMostViewController() {

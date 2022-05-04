@@ -25,6 +25,8 @@ struct MainWebView: UIViewRepresentable {
     func makeUIView(context: Context) -> WKWebView {
         print("makeUIView")
         
+//        NotificationCenter.default.addObserver(self, selector: Selector, name: Notification.Name("FCMToken"), object: <#T##Any?#>)
+        
         guard let url = URL(string: urlString) else {
             return WKWebView()
         }

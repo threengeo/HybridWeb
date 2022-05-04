@@ -16,7 +16,7 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    MainWebView(urlString: "http://www.naver.com")
+                    MainWebView(urlString: "https://www.jejusumpro.com")
                         .edgesIgnoringSafeArea(.all)
                 }
                 .alert(item: $showAppAlert) { appAlert in

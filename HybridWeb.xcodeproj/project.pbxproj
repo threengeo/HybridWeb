@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A5936BB281FB68800E0E3BE /* AppAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5936BA281FB68800E0E3BE /* AppAlert.swift */; };
+		2A5936C428221CD700E0E3BE /* GoogleService-Info-prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A5936C328221CD700E0E3BE /* GoogleService-Info-prod.plist */; };
 		2A60FDB6281F5D5500AA1205 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60FDB5281F5D5500AA1205 /* WebViewModel.swift */; };
 		2AF5508A2818BFCA00D6FBA1 /* WebViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF550892818BFCA00D6FBA1 /* WebViewConfig.swift */; };
 		2AF5508C2818C02000D6FBA1 /* WebViewScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF5508B2818C02000D6FBA1 /* WebViewScriptMessageHandler.swift */; };
@@ -16,8 +17,6 @@
 		2AF5509A2818CAFB00D6FBA1 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 2AF550992818CAFB00D6FBA1 /* index.html */; };
 		D87B9031281FFEF500DF8CF1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D87B9030281FFEF500DF8CF1 /* FirebaseAnalytics */; };
 		D87B9033281FFEF500DF8CF1 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D87B9032281FFEF500DF8CF1 /* FirebaseMessaging */; };
-		D87B90362820001800DF8CF1 /* GoogleService-Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = D87B90352820001800DF8CF1 /* GoogleService-Info-dev.plist */; };
-		D87B903C2820125300DF8CF1 /* GoogleService-Info-prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = D87B903B2820125200DF8CF1 /* GoogleService-Info-prod.plist */; };
 		D8F8952B28180FA7006BB149 /* HybridWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F8952A28180FA7006BB149 /* HybridWebApp.swift */; };
 		D8F8952D28180FA7006BB149 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F8952C28180FA7006BB149 /* ContentView.swift */; };
 		D8F8952F28180FA9006BB149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F8952E28180FA9006BB149 /* Assets.xcassets */; };
@@ -27,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		2A5936BA281FB68800E0E3BE /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
+		2A5936C328221CD700E0E3BE /* GoogleService-Info-prod.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-prod.plist"; sourceTree = "<group>"; };
 		2A60FDB3281A87EC00AA1205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2A60FDB4281F55E000AA1205 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2A60FDB5281F5D5500AA1205 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
@@ -36,9 +36,7 @@
 		2AF5508F2818C0E600D6FBA1 /* WebViewUIDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewUIDelegate.swift; sourceTree = "<group>"; };
 		2AF550992818CAFB00D6FBA1 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		D87B9034281FFF8700DF8CF1 /* HybridWeb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HybridWeb.entitlements; sourceTree = "<group>"; };
-		D87B90352820001800DF8CF1 /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-dev.plist"; path = "../../../../Downloads/GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
 		D87B903A282011A700DF8CF1 /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
-		D87B903B2820125200DF8CF1 /* GoogleService-Info-prod.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-prod.plist"; path = "../../../../../Downloads/GoogleService-Info-prod.plist"; sourceTree = "<group>"; };
 		D8F8952728180FA7006BB149 /* HybridWeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridWeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F8952A28180FA7006BB149 /* HybridWebApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridWebApp.swift; sourceTree = "<group>"; };
 		D8F8952C28180FA7006BB149 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,8 +74,8 @@
 		D87B90392820118400DF8CF1 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				D87B903B2820125200DF8CF1 /* GoogleService-Info-prod.plist */,
 				D87B903A282011A700DF8CF1 /* GoogleService-Info-dev.plist */,
+				2A5936C328221CD700E0E3BE /* GoogleService-Info-prod.plist */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -108,7 +106,6 @@
 				2AF550882818BF9300D6FBA1 /* WebView */,
 				D8F8952A28180FA7006BB149 /* HybridWebApp.swift */,
 				D8F8952C28180FA7006BB149 /* ContentView.swift */,
-				D87B90352820001800DF8CF1 /* GoogleService-Info-dev.plist */,
 				D8F8952E28180FA9006BB149 /* Assets.xcassets */,
 				D8F8953028180FA9006BB149 /* Preview Content */,
 				2AF550992818CAFB00D6FBA1 /* index.html */,
@@ -191,10 +188,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A5936C428221CD700E0E3BE /* GoogleService-Info-prod.plist in Resources */,
 				2AF5509A2818CAFB00D6FBA1 /* index.html in Resources */,
-				D87B90362820001800DF8CF1 /* GoogleService-Info-dev.plist in Resources */,
 				D8F8953228180FA9006BB149 /* Preview Assets.xcassets in Resources */,
-				D87B903C2820125300DF8CF1 /* GoogleService-Info-prod.plist in Resources */,
 				D8F8952F28180FA9006BB149 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,7 +365,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HybridWeb/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME)앱은 내위치 기반 날씨 정보 서비스 및 네비게이션 서비스를 위하여 위치정보를 필요로 합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "HybridWeb앱은 내위치 기반 날씨 정보 서비스 및 네비게이션 서비스를 위하여 위치정보를 필요로 합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -401,7 +397,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HybridWeb/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME)앱은 내위치 기반 날씨 정보 서비스 및 네비게이션 서비스를 위하여 위치정보를 필요로 합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "HybridWeb앱은 내위치 기반 날씨 정보 서비스 및 네비게이션 서비스를 위하여 위치정보를 필요로 합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

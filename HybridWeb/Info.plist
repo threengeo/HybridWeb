@@ -7,5 +7,15 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<string>NO</string>
+	<key>FirebaseDynamicLinksCustomDomains</key>
+	<array>
+		<string>https://jejusumpro.com</string>
+	</array>
+	<key>FirebaseMessagingAutoInitEnabled</key>
+	<string>YES</string>
+	<key>FirebaseScreenReportingEnabled</key>
+	<string>NO</string>
 </dict>
 </plist>

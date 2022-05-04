@@ -14,6 +14,14 @@
             <button id="getCookieButton" type="button">Get Cookie</button>
         </div>
         
+        <br />
+        
+        <div>
+            <button id="windowOpen" type="button">Window Open</button>
+        </div>
+        
+        <br />
+        
         <div style="margin-top: 20px;">
             <button id="getGpsButton" type="button">GetGps</button>
             <button id="getAppVersionButton" type="button">GetAppVersion</button>
@@ -122,6 +130,13 @@
                 console.log("get cookie...");
                 console.log(document.cookie);
                 webkit.messageHandlers.bridge.postMessage(document.cookie);
+            });
+            
+            
+            document
+            .getElementById("windowOpen")
+            .addEventListener("click", function () {
+                window.open();
             });
             
             
