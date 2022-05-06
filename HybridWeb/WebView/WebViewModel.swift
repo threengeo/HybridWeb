@@ -11,6 +11,8 @@ import MapKit
 
 class WebViewModel: NSObject, ObservableObject {
     
+    var target = PassthroughSubject<String, Never>()
+    
     var alertEvent = PassthroughSubject<AppAlert, Never>()
     
     var locationManager: CLLocationManager?

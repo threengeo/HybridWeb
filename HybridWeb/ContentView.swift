@@ -71,12 +71,20 @@ struct ContentView: View {
             }
         }
         .fullScreenCover(isPresented: $isPresented, content: {
-            MainWebView(urlString: "https://www.apple.com")
+//            if let target = webViewModel.target as? String {
+//                MainWebView(urlString: target)
+//                    .edgesIgnoringSafeArea(.all)
+//            }
+            MainWebView(urlString: "https://www.naver.com")
                 .edgesIgnoringSafeArea(.all)
         })
         .onReceive(webViewModel.alertEvent, perform: { appAlert in
             print("ContentView - AppAlert: ", appAlert)
             self.showAppAlert = appAlert
+        })
+        .onReceive(webViewModel.target, perform: { targetUrl in
+            print("Target url: \(targetUrl)")
+            self.isPresented.toggle()
         })
         .environmentObject(webViewModel)
     }

@@ -48,8 +48,9 @@ extension MainWebView.Coordinator: WKScriptMessageHandler {
             print("openModal: \(message.body)")
             if (!self.parent.presentationMode.wrappedValue.isPresented) {
                 if let receivedData : [String: String] = message.body as? Dictionary {
-                    print("receivedData: \(receivedData["url"] ?? "")")
-                    
+                    print("receivedData: \(receivedData["target"] ?? "")")
+                    print("receivedData: \(receivedData["name"] ?? "")")
+                    self.parent.webViewModel.target.send("https://www.nextez.co.kr")
                 }
             }
             break

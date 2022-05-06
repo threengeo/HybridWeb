@@ -172,7 +172,8 @@
             
             document.getElementById("openModal").addEventListener("click", function() {
                 webkit.messageHandlers.openModal.postMessage({
-                    url: "https://www.nextez.co.kr"
+                    target: "https://www.nextez.co.kr",
+                    name: "nextez offtial size"
                 });
             })
             
