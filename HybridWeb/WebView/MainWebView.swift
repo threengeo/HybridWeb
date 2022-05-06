@@ -11,6 +11,8 @@ import Combine
 
 struct MainWebView: UIViewRepresentable {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @EnvironmentObject var webViewModel: WebViewModel
     
 //    let wkProcessPool = WKProcessPool() //쿠키 공유? (섬프로)
@@ -41,14 +43,14 @@ struct MainWebView: UIViewRepresentable {
         newWebView.uiDelegate = context.coordinator
         newWebView.navigationDelegate = context.coordinator
         
-        newWebView.load(URLRequest(url: url))
+//        newWebView.load(URLRequest(url: url))
         
-//        guard let path: String = Bundle.main.path(forResource: "index", ofType: "html") else {
-//            return newWebView
-//
-//        }
-//        let localHTMLUrl = URL(fileURLWithPath: path, isDirectory: false)
-//        newWebView.loadFileURL(localHTMLUrl, allowingReadAccessTo: localHTMLUrl)
+        guard let path: String = Bundle.main.path(forResource: "index", ofType: "html") else {
+            return newWebView
+
+        }
+        let localHTMLUrl = URL(fileURLWithPath: path, isDirectory: false)
+        newWebView.loadFileURL(localHTMLUrl, allowingReadAccessTo: localHTMLUrl)
         
         return newWebView
     }

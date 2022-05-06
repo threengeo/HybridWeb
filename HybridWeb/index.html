@@ -48,7 +48,16 @@
         
         <hr />
         
+        <div>
+            <button id="openModal" type="button">Open Modal</button>
+            <button id="closeModal" type="button">Close Modal</button>
+        </div>
+        
+        <hr />
+        
         <div id="log"></div>
+        
+        
         
         
         <script>
@@ -136,7 +145,7 @@
             document
             .getElementById("windowOpen")
             .addEventListener("click", function () {
-                window.open();
+                window.open("https://www.apple.com", "_blank");
             });
             
             
@@ -159,6 +168,16 @@
             
             document.getElementById("clearBadgeCountButton").addEventListener("click", function() {
                 webkit.messageHandlers.clearBadgeCount.postMessage("");
+            })
+            
+            document.getElementById("openModal").addEventListener("click", function() {
+                webkit.messageHandlers.openModal.postMessage({
+                    url: "https://www.nextez.co.kr"
+                });
+            })
+            
+            document.getElementById("closeModal").addEventListener("click", function() {
+                webkit.messageHandlers.closeModal.postMessage("");
             })
         </script>
     </body>

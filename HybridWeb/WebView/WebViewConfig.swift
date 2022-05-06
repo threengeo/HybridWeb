@@ -12,9 +12,16 @@ extension MainWebView {
     func creatWebViewConfiguration(_ context: Context) -> WKWebViewConfiguration {
         let config = WKWebViewConfiguration()
         
-        let preferences = WKWebpagePreferences()
-        preferences.allowsContentJavaScript = true
-        config.defaultWebpagePreferences = preferences
+        if #available(iOS 14, *) {
+            let preferences = WKWebpagePreferences()
+            preferences.allowsContentJavaScript = true
+            config.defaultWebpagePreferences = preferences
+        }
+        else {
+            config.preferences.javaScriptEnabled = true
+            /// user interaction없이 윈도우 창을 열 수 있는지 여부를 나타냄. iOS에서는 기본값이 false이다.
+            config.preferences.javaScriptCanOpenWindowsAutomatically = true
+        }
         
         let userContentController = WKUserContentController()
         /**
@@ -42,6 +49,9 @@ extension MainWebView {
         
         userContentController.add(context.coordinator, name: "bridge")
         
+        userContentController.add(context.coordinator, name: "openModal")
+        
+        userContentController.add(context.coordinator, name: "closeModal")
         
         config.userContentController = userContentController
         

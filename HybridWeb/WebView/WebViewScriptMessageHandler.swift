@@ -44,6 +44,24 @@ extension MainWebView.Coordinator: WKScriptMessageHandler {
             print("clearBadgeCount...")
             break
             
+        case "openModal":
+            print("openModal: \(message.body)")
+            if (!self.parent.presentationMode.wrappedValue.isPresented) {
+                if let receivedData : [String: String] = message.body as? Dictionary {
+                    print("receivedData: \(receivedData["url"] ?? "")")
+                    
+                }
+            }
+            break
+            
+        case "closeModal":
+            print("closeModal")
+            if (self.parent.presentationMode.wrappedValue.isPresented) {
+                print("This is presented.")
+                self.parent.presentationMode.wrappedValue.dismiss()
+            }
+            break
+            
         default:
             break
         }
